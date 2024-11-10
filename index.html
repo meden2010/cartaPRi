@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta para Pri</title>
+    <style>
+        /* Estilos para la página de presentación */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+            transition: background-color 1s, opacity 1s; /* Transición suave para desvanecer */
+        }
+
+        /* Clases para aplicar el efecto de desvanecimiento */
+        .fade-out {
+            opacity: 0; /* Hacer que el contenido desaparezca */
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 1.5rem; /* Reducir el tamaño de fuente en pantallas pequeñas */
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            body {
+                font-size: 1.8rem; /* Ajustar el tamaño de fuente para tabletas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>Muchas Felicidades Pri</h1>
+        <p>Esta carta de la dedico con mucha creatividad y cariño</p>
+    </div>
+    <script src="confetti.js"></script>
+    <!-- Confetti  JS-->
+    <script>
+
+        // start
+
+        const start = () => {
+            setTimeout(function() {
+                confetti.start()
+            }, 999); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+        };
+
+        //  Stop
+
+        const stop = () => {
+            setTimeout(function() {
+                confetti.stop()
+            }, 5000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+        };
+
+        start();
+        stop();
+    </script>   
+
+    <script>
+        // Función para aplicar el desvanecimiento y redirigir después
+        setTimeout(function() {
+            // Aplicar la clase fade-out para hacer desaparecer el contenido
+            document.body.classList.add('fade-out');
+            
+            // Redirigir al usuario después de 1 segundo (para que vea el desvanecimiento)
+            setTimeout(function() {
+                window.location.href = "carta.html";
+            }, 1000);  // 1000 milisegundos = 1 segundo
+        }, 4000);  // 5000 milisegundos = 5 segundos
+    </script>
+
+    
+</body>
+</html>

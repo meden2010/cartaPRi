@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Card</title>
+    <!-- Google Font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script>
+        // Añadir la clase 'visible' a la tarjeta cuando se cargue la página
+        window.addEventListener("load", function () {
+            document.querySelector(".card").classList.add("visible");
+        });
+    </script>
+    <div class="card">
+      <div class="outside">
+        <div class="front">
+          <p>FELIZ CUMPLE AÑOS PRIIIII!!!</p>
+          <div class="cake">
+            <div class="top-layer"></div>
+            <div class="middle-layer"></div>
+            <div class="bottom-layer"></div>
+            <div class="candle"></div>
+          </div>
+        </div>
+        <div class="back"></div>
+      </div>
+      <div class="inside">
+        <p>Feliz cumple años PRIIIII espero que te la estes pasando muy bonito el día de hoy, dale clic al regalo, es para tí con mucho cariño a nuestra amistad</p>
+        <h1><a href="CartaparaPRI.pdf">&#127873;</a></h1>
+      </div>
+    </div>
+    <script src="confetti.js"></script>
+    <!-- Confetti  JS-->
+   
+    <script>
+
+        // start
+
+        const start = () => {
+            setTimeout(function() {
+                confetti.start()
+            }, 99); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+        };
+
+        //  Stop
+
+        const stop = () => {
+            setTimeout(function() {
+                confetti.stop()
+            }, 500000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+        };
+
+        start();
+        stop();
+    </script>   
+  </body>
+</html>
